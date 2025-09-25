@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -90,7 +92,7 @@ public class DeterministicSelect {
         return i;
     }
 
-    private static void swap(int[] array, int i, int j){
+    protected static void swap(int[] array, int i, int j){
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
