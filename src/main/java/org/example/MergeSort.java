@@ -25,7 +25,7 @@ public class MergeSort{
         sc.close();
     }
 
-    private static void mergeSort(int[] array, int[] buffer, int low, int high){
+    protected static void mergeSort(int[] array, int[] buffer, int low, int high){
 
         if (high - low + 1 <= 10){
             insertionSort(array, low, high);

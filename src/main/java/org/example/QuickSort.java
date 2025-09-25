@@ -1,3 +1,5 @@
+package org.example;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -17,7 +19,6 @@ public class QuickSort {
                 quickSort(arr, pivot + 1, high);
                 high = pivot - 1;
             }
-
         }
     }
 
@@ -64,6 +65,6 @@ public class QuickSort {
         }
         quickSort(array,  0, array.length - 1);
         System.out.println(Arrays.toString(array));
+        sc.close();
     }
-
 }
