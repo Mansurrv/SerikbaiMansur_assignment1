@@ -1,0 +1,11 @@
+testsuite_name,testcase_name,class_name,time_seconds
+org.example.MergeSortTest,testArrayWithMaxValues,org.example.MergeSortTest,0.069
+org.example.MergeSortTest,testEmptyArray,org.example.MergeSortTest,0.012
+org.example.MergeSortTest,testLargeRandomArrayCorrectness,org.example.MergeSortTest,0.016
+org.example.MergeSortTest,testArrayWithDuplicates,org.example.MergeSortTest,0.002
+org.example.MergeSortTest,testArrayWithNegativeNumbers,org.example.MergeSortTest,0.002
+org.example.MergeSortTest,testReverseSortedArray,org.example.MergeSortTest,0.002
+org.example.MergeSortTest,testArrayLargerThanCutoff,org.example.MergeSortTest,0.002
+org.example.MergeSortTest,testArraySmallerThanCutoff,org.example.MergeSortTest,0.002
+org.example.MergeSortTest,testAlreadySortedArray,org.example.MergeSortTest,0.002
+org.example.MergeSortTest,testSingleElementArray,org.example.MergeSortTest,0.002

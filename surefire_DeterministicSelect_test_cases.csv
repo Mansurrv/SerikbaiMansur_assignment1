@@ -1,0 +1,9 @@
+testsuite_name,testcase_name,class_name,time_seconds
+org.example.DeterministicSelectTest,testBoundaryKValues,org.example.DeterministicSelectTest,0.006
+org.example.DeterministicSelectTest,testArrayWithDuplicates,org.example.DeterministicSelectTest,0.002
+org.example.DeterministicSelectTest,testSortedArrayAdversarial,org.example.DeterministicSelectTest,0.002
+org.example.DeterministicSelectTest,testInvalidKTooLarge,org.example.DeterministicSelectTest,0.005
+org.example.DeterministicSelectTest,testInvalidKZero,org.example.DeterministicSelectTest,0.003
+org.example.DeterministicSelectTest,validateAgainstArraysSortMultipleTrials,org.example.DeterministicSelectTest,0.033
+org.example.DeterministicSelectTest,testSmallArrayBaseCase,org.example.DeterministicSelectTest,0.002
+org.example.DeterministicSelectTest,testNegativeNumbers,org.example.DeterministicSelectTest,0.002

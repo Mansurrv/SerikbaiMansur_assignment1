@@ -1,0 +1,6 @@
+testsuite_name,testcase_name,class_name,time_seconds
+org.example.PointTest,validateAgainstBruteForceMultipleTrials,org.example.PointTest,0.078
+org.example.PointTest,testIdenticalPoints,org.example.PointTest,0.002
+org.example.PointTest,testBoundaryConditions,org.example.PointTest,0.001
+org.example.PointTest,testLargeRandomSetPerformance,org.example.PointTest,0.033
+org.example.PointTest,testBasicExample,org.example.PointTest,0.001
