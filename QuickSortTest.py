@@ -40,8 +40,7 @@ def surefire_xml_to_csv(xml_path, csv_path):
             
             writer.writerows(test_cases_data)
 
-        print(f"✅ Успешно извлечено {len(test_cases_data)} тестовых случаев.")
-        print(f"💾 Данные сохранены в файл: {csv_path}")
+        print(f"Данные сохранены в файл: {csv_path}")
 
     except ET.ParseError as e:
         print(f"Ошибка парсинга XML: {e}")

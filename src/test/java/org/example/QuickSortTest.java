@@ -12,6 +12,22 @@ public class QuickSortTest {
         assertArrayEquals(expected, input, message);
     }
 
+    private void runLargeRandomTest(int N) {
+        Random random = new Random();
+        int[] input = new int[N];
+
+        for (int i = 0; i < N; i++) {
+            input[i] = random.nextInt();
+        }
+
+        int[] expected = input.clone();
+        Arrays.sort(expected);
+
+        testSorting(input, expected, "Сортировка большого случайного массива (N=" + N + ") неверна.");
+    }
+
+    // --- Базовые тесты ---
+
     @Test
     void testEmptyArray() {
         int[] input = {};
@@ -54,6 +70,7 @@ public class QuickSortTest {
         testSorting(input, expected, "Сортировка обратно отсортированного массива.");
     }
 
+    // Оставляем только один тест на StackOverflow для большого N
     @Test
     void testStackDepthOnLargeAdversarialArray() {
         int N = 100_000;
@@ -66,5 +83,58 @@ public class QuickSortTest {
         int[] expected = input.clone();
 
         testSorting(input, expected, "Сортировка большого массива, StackOverflow check.");
+    }
+
+    // --- НОВЫЕ ТЕСТЫ КОРРЕКТНОСТИ (N = 500 до 5000 с шагом 500) ---
+    // Предыдущие тесты для N > 100,000 удалены в соответствии с запросом.
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_500() {
+        runLargeRandomTest(500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_1000() {
+        runLargeRandomTest(1000);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_1500() {
+        runLargeRandomTest(1500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_2000() {
+        runLargeRandomTest(2000);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_2500() {
+        runLargeRandomTest(2500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_3000() {
+        runLargeRandomTest(3000);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_3500() {
+        runLargeRandomTest(3500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_4000() {
+        runLargeRandomTest(4000);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_4500() {
+        runLargeRandomTest(4500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_5000() {
+        runLargeRandomTest(5000);
     }
 }

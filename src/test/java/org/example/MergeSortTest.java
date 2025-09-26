@@ -1,6 +1,8 @@
 package org.example;
 
 import org.junit.jupiter.api.Test;
+import java.util.Arrays;
+import java.util.Random;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MergeSortTest {
@@ -10,17 +12,34 @@ public class MergeSortTest {
 
         MergeSort.mergeSort(input, buffer, 0, input.length - 1);
 
+        assertArrayEquals(expected, input, "Массив не был отсортирован корректно.");
     }
 
+    private void runLargeRandomTest(int N) {
+        int[] input = new int[N];
+        Random random = new Random();
+
+        for (int i = 0; i < N; i++) {
+            input[i] = random.nextInt();
+        }
+
+        int[] expected = input.clone();
+        Arrays.sort(expected);
+
+        testSorting(input, expected);
+    }
+
+    // --- Базовые тесты ---
+
     @Test
-    void testEmptyArray() {
+    void testEmptyArray() { // N=0
         int[] input = {};
         int[] expected = {};
         testSorting(input, expected);
     }
 
     @Test
-    void testSingleElementArray() {
+    void testSingleElementArray() { // N=1
         int[] input = {5};
         int[] expected = {5};
         testSorting(input, expected);
@@ -79,20 +98,55 @@ public class MergeSortTest {
         testSorting(input, expected);
     }
 
+    // --- СГЕНЕРИРОВАННЫЕ ТЕСТЫ (N = 500 до 5000 с шагом 500) ---
+
     @Test
-    void testLargeRandomArrayCorrectness() {
+    void testLargeRandomArrayCorrectnessN_500() {
+        runLargeRandomTest(500);
+    }
 
-        int N = 10000;
-        int[] input = new int[N];
-        java.util.Random random = new java.util.Random();
+    @Test
+    void testLargeRandomArrayCorrectnessN_1000() {
+        runLargeRandomTest(1000);
+    }
 
-        for (int i = 0; i < N; i++) {
-            input[i] = random.nextInt();
-        }
+    @Test
+    void testLargeRandomArrayCorrectnessN_1500() {
+        runLargeRandomTest(1500);
+    }
 
-        int[] expected = input.clone();
-        java.util.Arrays.sort(expected);
+    @Test
+    void testLargeRandomArrayCorrectnessN_2000() {
+        runLargeRandomTest(2000);
+    }
 
-        testSorting(input, expected);
+    @Test
+    void testLargeRandomArrayCorrectnessN_2500() {
+        runLargeRandomTest(2500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_3000() {
+        runLargeRandomTest(3000);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_3500() {
+        runLargeRandomTest(3500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_4000() {
+        runLargeRandomTest(4000);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_4500() {
+        runLargeRandomTest(4500);
+    }
+
+    @Test
+    void testLargeRandomArrayCorrectnessN_5000() {
+        runLargeRandomTest(5000);
     }
 }

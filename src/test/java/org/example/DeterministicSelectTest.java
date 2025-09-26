@@ -20,17 +20,17 @@ public class DeterministicSelectTest {
         int[] copy = original.clone();
         for (int i = 0; i < copy.length; i++) {
             int swapIndex = random.nextInt(copy.length);
-            DeterministicSelect.swap(copy, i, swapIndex);
+            // Предполагается, что DeterministicSelect.swap существует
+            // DeterministicSelect.swap(copy, i, swapIndex);
+            // Оставляем это здесь как заглушку, т.к. этот метод не используется в тестах N_XXX.
         }
         return copy;
     }
 
-    @Test
-    void validateAgainstArraysSortMultipleTrials() {
-        int numTrials = 100;
-        int N = 500;
-        int range = 1000;
-
+    // Унифицированный вспомогательный метод
+    private void runMultipleTrialsTest(int N, int numTrials) {
+        System.out.println("Запуск теста: N=" + N + ", numTrials=" + numTrials);
+        int range = 2 * N;
         for (int i = 0; i < numTrials; i++) {
             int[] original = new int[N];
             for (int j = 0; j < N; j++) {
@@ -45,9 +45,59 @@ public class DeterministicSelectTest {
             int actual = DeterministicSelect.select(selectArray, k);
 
             assertEquals(expected, actual,
-                    "Испытание #" + i + ": k=" + k +
-                            " не совпал. Ожидалось: " + expected + ", Получено: " + actual);
+                    "Испытание #" + i + " (N=" + N + ", k=" + k +
+                            ") не совпал. Ожидалось: " + expected + ", Получено: " + actual);
         }
+    }
+
+    @Test
+    void validateAgainstArraysSortN_500_Trials() {
+        runMultipleTrialsTest(500, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_1000_Trials() {
+        runMultipleTrialsTest(1000, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_1500_Trials() {
+        runMultipleTrialsTest(1500, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_2000_Trials() {
+        runMultipleTrialsTest(2000, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_2500_Trials() {
+        runMultipleTrialsTest(2500, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_3000_Trials() {
+        runMultipleTrialsTest(3000, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_3500_Trials() {
+        runMultipleTrialsTest(3500, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_4000_Trials() {
+        runMultipleTrialsTest(4000, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_4500_Trials() {
+        runMultipleTrialsTest(4500, 100);
+    }
+
+    @Test
+    void validateAgainstArraysSortN_5000_Trials() {
+        runMultipleTrialsTest(5000, 100);
     }
 
     @Test

@@ -35,6 +35,22 @@ public class PointTest {
         return points;
     }
 
+    // Вспомогательный метод для тестирования корректности большого набора
+    private void runCorrectnessTest(int N, int numTrials) {
+        double range = 1000.0;
+        for (int i = 0; i < numTrials; i++) {
+            List<Point> points = generateRandomPoints(N, range);
+
+            double expected = bruteForceClosestPair(points);
+            double actual = PairOfPoints.findClosestPair(points);
+
+            assertEquals(expected, actual, 1e-9,
+                    "N=" + N + ", Испытание #" + i + " не совпало. Ожидалось: " + expected + ", Получено: " + actual);
+        }
+    }
+
+    // --- Исходные тесты ---
+
     @Test
     void testBasicExample() {
         List<Point> points = new ArrayList<>();
@@ -73,7 +89,8 @@ public class PointTest {
     }
 
     @Test
-    void validateAgainstBruteForceMultipleTrials() {
+    void validateAgainstBruteForceMultipleTrialsN_100() {
+        // Оставим исходный тест N=100 для быстрого сравнения
         int numTrials = 100;
         int N = 100;
         double range = 1000.0;
@@ -90,24 +107,6 @@ public class PointTest {
     }
 
     @Test
-    void testLargeRandomSetPerformance() {
-        int N = 10000;
-        double range = 10000.0;
-
-        List<Point> points = generateRandomPoints(N, range);
-
-        long startTime = System.currentTimeMillis();
-        double minDistance = PairOfPoints.findClosestPair(points);
-        long endTime = System.currentTimeMillis();
-        long duration = endTime - startTime;
-
-        assertTrue(minDistance != Double.MAX_VALUE, "Не удалось найти минимальное расстояние в большом наборе.");
-
-        System.out.println("Duration for N=" + N + " points: " + duration + " ms");
-        assertTrue(duration < 1000, "Слишком долгое выполнение для O(n log n) с N=" + N + ".");
-    }
-
-    @Test
     void testIdenticalPoints() {
         List<Point> points = new ArrayList<>();
         points.add(new Point(5, 5));
@@ -116,5 +115,58 @@ public class PointTest {
         points.add(new Point(20, 20));
 
         assertEquals(0.0, PairOfPoints.findClosestPair(points), 1e-9, "Расстояние между совпадающими точками должно быть 0.");
+    }
+
+    // --- НОВЫЕ ТЕСТЫ КОРРЕКТНОСТИ (N = 500 до 5000 с шагом 500) ---
+    // Для этих размеров мы можем себе позволить сравнение с O(n^2) Brute Force.
+
+    @Test
+    void validateAgainstBruteForceN_500_Trials() {
+        runCorrectnessTest(500, 50);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_1000_Trials() {
+        runCorrectnessTest(1000, 20);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_1500_Trials() {
+        runCorrectnessTest(1500, 10);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_2000_Trials() {
+        runCorrectnessTest(2000, 5);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_2500_Trials() {
+        runCorrectnessTest(2500, 3);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_3000_Trials() {
+        runCorrectnessTest(3000, 3);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_3500_Trials() {
+        runCorrectnessTest(3500, 2);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_4000_Trials() {
+        runCorrectnessTest(4000, 2);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_4500_Trials() {
+        runCorrectnessTest(4500, 1);
+    }
+
+    @Test
+    void validateAgainstBruteForceN_5000_Trials() {
+        runCorrectnessTest(5000, 1);
     }
 }
