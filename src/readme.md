@@ -65,8 +65,6 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 -  Θ(n)
 
-# 
-
 # 3 Constant-Factor Effects
 
 ### 3.1 Cache Locality 
