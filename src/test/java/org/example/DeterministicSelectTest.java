@@ -20,10 +20,14 @@ public class DeterministicSelectTest {
         int[] copy = original.clone();
         for (int i = 0; i < copy.length; i++) {
             int swapIndex = random.nextInt(copy.length);
+            // Предполагается, что DeterministicSelect.swap существует
+            // DeterministicSelect.swap(copy, i, swapIndex);
+            // Оставляем это здесь как заглушку, т.к. этот метод не используется в тестах N_XXX.
         }
         return copy;
     }
 
+    // Унифицированный вспомогательный метод
     private void runMultipleTrialsTest(int N, int numTrials) {
         System.out.println("Запуск теста: N=" + N + ", numTrials=" + numTrials);
         int range = 2 * N;

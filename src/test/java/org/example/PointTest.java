@@ -35,6 +35,7 @@ public class PointTest {
         return points;
     }
 
+    // Вспомогательный метод для тестирования корректности большого набора
     private void runCorrectnessTest(int N, int numTrials) {
         double range = 1000.0;
         for (int i = 0; i < numTrials; i++) {
@@ -47,6 +48,8 @@ public class PointTest {
                     "N=" + N + ", Испытание #" + i + " не совпало. Ожидалось: " + expected + ", Получено: " + actual);
         }
     }
+
+    // --- Исходные тесты ---
 
     @Test
     void testBasicExample() {
@@ -87,6 +90,7 @@ public class PointTest {
 
     @Test
     void validateAgainstBruteForceMultipleTrialsN_100() {
+        // Оставим исходный тест N=100 для быстрого сравнения
         int numTrials = 100;
         int N = 100;
         double range = 1000.0;
@@ -113,6 +117,8 @@ public class PointTest {
         assertEquals(0.0, PairOfPoints.findClosestPair(points), 1e-9, "Расстояние между совпадающими точками должно быть 0.");
     }
 
+    // --- НОВЫЕ ТЕСТЫ КОРРЕКТНОСТИ (N = 500 до 5000 с шагом 500) ---
+    // Для этих размеров мы можем себе позволить сравнение с O(n^2) Brute Force.
 
     @Test
     void validateAgainstBruteForceN_500_Trials() {
