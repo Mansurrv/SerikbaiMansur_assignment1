@@ -2,8 +2,8 @@ import xml.etree.ElementTree as ET
 import csv
 import os
 
-XML_FILE_PATH = 'target/surefire-reports/TEST-org.example.DeterministicSelectTest.xml'
-CSV_FILE_PATH = 'surefire_DeterministicSelect_test_cases.csv'
+XML_FILE_PATH = '../target/surefire-reports/TEST-org.example.QuickSortTest.xml'
+CSV_FILE_PATH = 'surefire_quickSort_test_cases.csv'
 
 def surefire_xml_to_csv(xml_path, csv_path):
     if not os.path.exists(xml_path):

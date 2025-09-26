@@ -26,8 +26,6 @@ public class QuickSortTest {
         testSorting(input, expected, "Сортировка большого случайного массива (N=" + N + ") неверна.");
     }
 
-    // --- Базовые тесты ---
-
     @Test
     void testEmptyArray() {
         int[] input = {};
@@ -70,7 +68,6 @@ public class QuickSortTest {
         testSorting(input, expected, "Сортировка обратно отсортированного массива.");
     }
 
-    // Оставляем только один тест на StackOverflow для большого N
     @Test
     void testStackDepthOnLargeAdversarialArray() {
         int N = 100_000;
@@ -84,9 +81,6 @@ public class QuickSortTest {
 
         testSorting(input, expected, "Сортировка большого массива, StackOverflow check.");
     }
-
-    // --- НОВЫЕ ТЕСТЫ КОРРЕКТНОСТИ (N = 500 до 5000 с шагом 500) ---
-    // Предыдущие тесты для N > 100,000 удалены в соответствии с запросом.
 
     @Test
     void testLargeRandomArrayCorrectnessN_500() {

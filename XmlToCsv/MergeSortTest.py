@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import csv
 import os
 
-XML_FILE_PATH = 'target/surefire-reports/TEST-org.example.MergeSortTest.xml'
+XML_FILE_PATH = '../target/surefire-reports/TEST-org.example.MergeSortTest.xml'
 CSV_FILE_PATH = 'surefire_MergeSort_test_cases.csv'
 
 def surefire_xml_to_csv(xml_path, csv_path):

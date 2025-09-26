@@ -29,8 +29,6 @@ public class MergeSortTest {
         testSorting(input, expected);
     }
 
-    // --- Базовые тесты ---
-
     @Test
     void testEmptyArray() { // N=0
         int[] input = {};
@@ -97,8 +95,6 @@ public class MergeSortTest {
 
         testSorting(input, expected);
     }
-
-    // --- СГЕНЕРИРОВАННЫЕ ТЕСТЫ (N = 500 до 5000 с шагом 500) ---
 
     @Test
     void testLargeRandomArrayCorrectnessN_500() {
