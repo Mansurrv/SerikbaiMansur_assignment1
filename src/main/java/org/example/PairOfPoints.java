@@ -6,14 +6,12 @@ import java.util.Comparator;
 import java.util.List;
 
 class Point {
-
     double x, y;
 
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
     }
-
     public double distance(Point other) {
         double dx = this.x - other.x;
         double dy = this.y - other.y;
@@ -24,25 +22,20 @@ class Point {
     public String toString() {
         return "{" + x + "," + y + "}";
     }
-
 }
 
 
 public class PairOfPoints {
-
     public static double findClosestPair(List<Point> points) {
-
         if (points == null || points.size() < 2) {
             return Double.MAX_VALUE;
         }
 
         Collections.sort(points, Comparator.comparingDouble(p -> p.x));
-
         return recursiveFind(points, 0, points.size() - 1);
     }
 
     private static double recursiveFind(List<Point> points, int low, int high) {
-
         int n = high - low + 1;
 
         if (n <= 3) {
@@ -54,8 +47,8 @@ public class PairOfPoints {
             }
 
             return minDistance;
-
         }
+
 
         int mid = low + (high - low) / 2;
         Point midPoint = points.get(mid);
@@ -72,11 +65,9 @@ public class PairOfPoints {
         }
 
         return Math.min(minDistance, stripClosest(strip, minDistance));
-
     }
 
     private static double stripClosest(List<Point> strip, double minDistance) {
-
         Collections.sort(strip, Comparator.comparingDouble(p -> p.y));
 
         for (int i = 0; i < strip.size(); i++) {
@@ -86,7 +77,6 @@ public class PairOfPoints {
         }
 
         return minDistance;
-
     }
 
     public static void main(String[] args) {
