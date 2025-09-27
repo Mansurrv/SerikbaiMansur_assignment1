@@ -1,3 +1,22 @@
+![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.10-blue)
+
+## 📑 Contents
+- [_Architecture notes_](#1-architecture-notes)
+- [_Recurrence Analyze_](#2-recurrence-analyze)
+- [_Constant-Factor Effects_](#3-constant-factor-effects)
+- [_Summary_](#summary)
+
+## ⚙️ Install
+```
+git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
+cd project
+pip install -r requirements.txt
+```
+
+## 🖼️ Скриншоты
+![Algorithms](Diagram/AlgorithmsTimeAndN.png)
+
 # 1. Architecture notes
 
 ### 1.1 Quick Sort
