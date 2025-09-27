@@ -7,7 +7,7 @@ CSV_FILE_PATH = 'surefire_quickSort_test_cases.csv'
 
 def surefire_xml_to_csv(xml_path, csv_path):
     if not os.path.exists(xml_path):
-        print(f"Ошибка: Файл не найден по пути: {xml_path}")
+        print(f"Error: {xml_path}")
         return
 
     try:
@@ -28,7 +28,6 @@ def surefire_xml_to_csv(xml_path, csv_path):
             test_cases_data.append(row)
 
         if not test_cases_data:
-            print("Внимание: В XML-файле не найдено ни одного тега <testcase>.")
             return
 
         fieldnames = ['testsuite_name', 'testcase_name', 'class_name', 'time_seconds']
@@ -40,12 +39,12 @@ def surefire_xml_to_csv(xml_path, csv_path):
             
             writer.writerows(test_cases_data)
 
-        print(f"Данные сохранены в файл: {csv_path}")
+        print(f"Data saved in file: {csv_path}")
 
     except ET.ParseError as e:
-        print(f"Ошибка парсинга XML: {e}")
+        print(f"Parsing error: {e}")
     except Exception as e:
-        print(f"Произошла непредвиденная ошибка: {e}")
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     surefire_xml_to_csv(XML_FILE_PATH, CSV_FILE_PATH)
