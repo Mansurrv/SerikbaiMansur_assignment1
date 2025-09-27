@@ -38,10 +38,6 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 - Maven
 
 
-## 👨‍💻 Автор
-- Mansur Serikbai (@mansurrvv)
-
-
 # 1. Architecture notes
 
 ### 1.1 Quick Sort
@@ -66,6 +62,8 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 
 **Recursion Control**   -   Achieves linear complexity `O(n)` by selecting a deterministic pivot that is quaranteed to be in the range between 30% and 70% of the elements. This prevents the "BAD" partitions characteristic of **QuickSelect**.
 
+<br>
+<br>
 
 # 2. Recurrence Analyze
 
@@ -76,7 +74,8 @@ The method of analysis that i use is _Master Theorem_. The Recursive Ratio is `T
 #### Explanation how i find it?
 
 - `a=2` two recursive calls
-- `b=2` size of subtask `n/2`
+- `b=2` size of subtask `## 👨‍💻 Автор
+- Mansur Serikbai (@mansurrvv)n/2`
 - `f(n)=n` merger cost
 
 ### 2.2 Quick Sort
@@ -110,6 +109,8 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 -  `Θ(n)`
 
+<br>
+<br>
 
 # 3 Constant-Factor Effects
 
@@ -177,4 +178,5 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 - Allignment / Misallignment: Compliance slower in practice
 
 
-
+## 👨‍💻 Developer
+- Mansur Serikbai (@mansurrvv)
