@@ -191,6 +191,15 @@ docs(report): master cases & AB intuition, initial plots
 - Practical observation: The highest constant factor. In practice, slower than _O(n logn)_ Quick Sort / Select for most n.
 - Allignment / Misallignment: Compliance slower in practice
 
+
+| Algorithm           | Theory (Θ)     | Practical Observation                          | Alignment |
+|---------------------|---------------|-----------------------------------------------|-----------|
+| **Merge Sort**      | Θ(n log n)    | Average, buffer overhead                      | ✅ Yes |
+| **Quick Sort**      | Θ(n log n)    | Fast, cache-friendly                          | ✅ Yes |
+| **Closest Pair**    | Θ(n log n)    | Slower due to GC & floating-point             | ⚠️ Partial |
+| **Deterministic Select** | Θ(n)     | High constant factor, slower than QuickSort   | ⚠️ No |
+
+
 <br>
 
 ## 👨‍💻 Developer
