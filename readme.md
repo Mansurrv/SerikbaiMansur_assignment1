@@ -7,6 +7,7 @@
 # ![gif](https://github.com/Readme-Workflows/Readme-Icons/blob/main/icons/gifs/wave.gif) Assignment 1
 _A description that contains complex analyze: what it is and why it is needed_
 
+<br>
 
 ## 📑 Contents
 - [_Architecture notes_](#1-architecture-notes)
@@ -14,12 +15,14 @@ _A description that contains complex analyze: what it is and why it is needed_
 - [_Constant-Factor Effects_](stant-factor-effects)
 - [_Summary_](#summary)
 
+<br>
 
 ## ⚙️ Clone the Repository
 ```
 git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ```
 
+<br>
 
 ## 🖼 Diagrams
 ![Algorithms](Diagram/AlgorithmsTimeAndN.png)
@@ -30,6 +33,7 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ![Algorithms](Diagram/QuickSortAndMergeSort.png)
 ![Algorithms](Diagram/Depth&N/MergeSort.png)
 
+<br>
 
 ## 🛠 Technology stack
 - Java Core
