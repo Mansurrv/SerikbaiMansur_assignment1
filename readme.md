@@ -34,6 +34,9 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ![Algorithms](Diagram/Depth&N/QuickSort.png)
 ![Algorithms](Diagram/QuickSortAndMergeSort.png)
 ![Algorithms](Diagram/Depth&N/MergeSort.png)
+![Algorithms](Diagram/Depth&N/ClosestPair.png)
+![Algorithms](Diagram/Depth&N/Total.png)
+
 
 <br>
 
