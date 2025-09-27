@@ -26,6 +26,7 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 
 ## 🖼 Diagrams
 ![Algorithms](Diagram/AlgorithmsTimeAndN.png)
+![Algorithms](Diagram/Benchmark/benchmark.png)
 ![Algorithms](Diagram/Depth&N/All.png)
 ![Algorithms](Diagram/DeterministicSelectAndQuickSort.png)
 ![Algorithms](Diagram/Depth&N/DeterministicSelect.png)
@@ -153,7 +154,7 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 #### 3.3.3 Quick Sort / Select
 
 - In my Quick Sort / Select algorithms work primarily with primitive `int[] array` and have minimal impact on Garbage Collection (GC).
-
+docs(report): master cases & AB intuition, initial plots
 <br>
 <br>
 
