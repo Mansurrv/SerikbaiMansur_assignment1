@@ -36,6 +36,7 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ![Algorithms](Diagram/Depth&N/MergeSort.png)
 ![Algorithms](Diagram/Depth&N/ClosestPair.png)
 ![Algorithms](Diagram/Depth&N/Total.png)
+![Algorithms](Diagram/MerticsResult/metric.png)
 
 
 <br>
