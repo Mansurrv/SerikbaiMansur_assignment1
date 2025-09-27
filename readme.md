@@ -25,6 +25,7 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 <br>
 
 ## 🖼 Diagrams
+>The Algorithms that find in what time do it from 1 to `n` (MergeSort / QuickSort / DeterministicSelect / ClosestPair)
 ![Algorithms](Diagram/AlgorithmsTimeAndN.png)
 ![Algorithms](Diagram/Benchmark/benchmark.png)
 ![Algorithms](Diagram/Depth&N/All.png)
