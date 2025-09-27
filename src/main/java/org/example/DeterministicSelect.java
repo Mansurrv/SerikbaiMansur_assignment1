@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class DeterministicSelect {
-
     public static int select(int[] array, int k){
         if (array == null || k <= 0 || k > array.length){
             throw new IllegalArgumentException("Erroneous selection");
@@ -60,7 +59,6 @@ public class DeterministicSelect {
     }
 
     private static int partition(int[] array, int low, int high, int pivot) {
-
         int pivotIndex = -1;
 
         for (int i = low; i <= high; i++) {
@@ -76,18 +74,22 @@ public class DeterministicSelect {
         int j = high - 1;
 
         while (true) {
+
             while (i <= high && array[i] < pivot) {
                 i++;
             }
             while (j >= low && array[j] >= pivot) {
                 j--;
             }
+
             if (i < j) {
                 swap(array, i, j);
-            } else {
+            }
+            else {
                 break;
             }
         }
+
         swap(array, i, high);
         return i;
     }
