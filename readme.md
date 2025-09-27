@@ -16,6 +16,12 @@ pip install -r requirements.txt
 
 ## 🖼️ Скриншоты
 ![Algorithms](Diagram/AlgorithmsTimeAndN.png)
+![Algorithms](Diagram/Depth&N/All.png)
+![Algorithms](Diagram/DeterministicSelectAndQuickSort.png)
+![Algorithms](Diagram/Depth&N/DeterministicSelect.png)
+![Algorithms](Diagram/Depth&N/QuickSort.png)
+![Algorithms](Diagram/QuickSortAndMergeSort.png)
+![Algorithms](Diagram/Depth&N/MergeSort.png)
 
 # 1. Architecture notes
 
