@@ -3,8 +3,8 @@
 ![Python](https://img.shields.io/badge/python-yellow)
 ![JUnit5](https://img.shields.io/badge/JUnit5-red)
 
-# Assignment 1. Algoritms
-_A complex description: what it is and why it is needed_
+# Assignment 1
+_A description that contains complex analyze: what it is and why it is needed_
 
 
 ## 📑 Contents
@@ -37,41 +37,33 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 - Maven
 
 
-| What I did                                                            | Status |
-|-----------------------------------------------------------------------|-------|
-| Algorithms                                                            | ✅     |
-| Report                                                                      | ✅     |
-| GitHub workflow                         | ✅     |
-| Testing | ✅     |
-
-
 ## 👨‍💻 Автор
-- Mansur (@mansurrvv)
+- Mansur Serikbai (@mansurrvv)
 
 
 # 1. Architecture notes
 
 ### 1.1 Quick Sort
 
-**Recursion depth**   --->   Controlled by optimizing tail of recursion on the larger partition. Shortly the recursive call is always directed to the smaller of the tw partitions, and the larger partition is processed in an iterative while loop.
+**Recursion depth**   -   Controlled by optimizing tail of recursion on the larger partition. Shortly the recursive call is always directed to the smaller of the tw partitions, and the larger partition is processed in an iterative while loop.
 
-**Supporting element**   --->   A randomized anchor element that is selected from a random index in the range from low to high is used, which provides the expected complexity of `O(n logn)` and guarantees that the worst case of `O(n^2)` is extremely unlikely
+**Supporting element**   -   A randomized anchor element that is selected from a random index in the range from low to high is used, which provides the expected complexity of `O(n logn)` and guarantees that the worst case of `O(n^2)` is extremely unlikely
 
-**Limit**   --->   This architecture limits the recursion depth to `O(logn)`, preventing stack overflow even on very large, already sorted, or reverse sorted arrays
+**Limit**   -   This architecture limits the recursion depth to `O(logn)`, preventing stack overflow even on very large, already sorted, or reverse sorted arrays
 
 ### 1.2 Closest Pair of Points
 
-Memory management   --->   The main memory management occurs when creating strip list at each step of recursion. Unlike in-place sorting, here O(n) memory is allocated for the strip, although this amount decreases at each level of recursion
+**Memory management**   -   The main memory management occurs when creating strip list at each step of recursion. Unlike in-place sorting, here O(n) memory is allocated for the strip, although this amount decreases at each level of recursion
 
-Complexity   --->   The complexity of `O(n logn)` is achieved through two keys points:
+**Complexity**   -   The complexity of `O(n logn)` is achieved through two keys points:
 * Sorting by X is performed once before recursion `O(n log n)`
 * Sorting the Strip by Y at each level of recursion, combined with linear processing `O(n)`, maintains the overall complexity of `O(n log n)`
 
 ### 1.3 Deterministic Select
 
-Memory management   --->   The algorithm performs most operations in-place. The only memory allocation accurs for the array of medians m that size is `n/5`.
+**Memory management**   -   The algorithm performs most operations in-place. The only memory allocation accurs for the array of medians m that size is `n/5`.
 
-Recursion Control   --->   Achieves linear complexity `O(n)` by selecting a deterministic pivot that is quaranteed to be in the range between 30% and 70% of the elements. This prevents the "BAD" partitions characteristic of **QuickSelect**.
+**Recursion Control**   -   Achieves linear complexity `O(n)` by selecting a deterministic pivot that is quaranteed to be in the range between 30% and 70% of the elements. This prevents the "BAD" partitions characteristic of **QuickSelect**.
 
 
 # 2. Recurrence Analyze
