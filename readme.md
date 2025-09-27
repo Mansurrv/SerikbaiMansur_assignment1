@@ -37,6 +37,8 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 - JUnit5
 - Maven
 
+<br>
+<br>
 
 # 1. Architecture notes
 
@@ -148,6 +150,8 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 - In my Quick Sort / Select algorithms work primarily with primitive `int[] array` and have minimal impact on Garbage Collection (GC).
 
+<br>
+<br>
 
 # Summary
 
@@ -177,6 +181,8 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 - Practical observation: The highest constant factor. In practice, slower than _O(n logn)_ Quick Sort / Select for most n.
 - Allignment / Misallignment: Compliance slower in practice
 
+<br>
+<br>
 
 ## 👨‍💻 Developer
 - Mansur Serikbai (@mansurrvv)
