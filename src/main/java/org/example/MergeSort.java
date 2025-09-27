@@ -1,11 +1,8 @@
 package org.example;
-
 import java.util.Scanner;
 
 public class MergeSort{
-
     public static void main(String[] args){
-
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -26,7 +23,6 @@ public class MergeSort{
     }
 
     protected static void mergeSort(int[] array, int[] buffer, int low, int high){
-
         if (high - low + 1 <= 10){
             insertionSort(array, low, high);
             return;
@@ -35,7 +31,6 @@ public class MergeSort{
         if (low >= high){
             return;
         }
-
 
         int mid = low + (high - low) / 2;
 
@@ -46,7 +41,6 @@ public class MergeSort{
     }
 
     private static void print(int[] array, int[] buffer, int low, int mid, int high){
-
         for (int i=low; i<=high; i++){
             buffer[i] = array[i];
         }
