@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class QuickSort {
     public static void quickSort(int[] arr, int low, int high){
+
         while (low < high){
             int pivot = partition(arr, low, high);
 
