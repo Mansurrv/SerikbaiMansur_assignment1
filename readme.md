@@ -3,21 +3,27 @@
 ![Python](https://img.shields.io/badge/python-yellow)
 ![JUnit5](https://img.shields.io/badge/JUnit5-red)
 
+---
 
 # Assignment 1. Algoritms
-A complex description: what it is and why it is needed
+_A complex description: what it is and why it is needed_
 
+---
 
 ## 📑 Contents
 - [_Architecture notes_](#1-architecture-notes)
 - [_Recurrence Analyze_](#2-recurrence-analyze)
-- [_Constant-Factor Effects_](#3-constant-factor-effects)
+- [_Constant-Factor Effects_](stant-factor-effects)
 - [_Summary_](#summary)
+
+---
 
 ## ⚙️ Install
 ```
 git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ```
+
+---
 
 ## 🖼️ Скриншоты
 ![Algorithms](Diagram/AlgorithmsTimeAndN.png)
@@ -28,14 +34,29 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ![Algorithms](Diagram/QuickSortAndMergeSort.png)
 ![Algorithms](Diagram/Depth&N/MergeSort.png)
 
+---
+
 ## 🛠 Technology stack
 - Java Core
 - Python
 - JUnit5
 - Maven
 
+---
+
+| What I did                                                            | Status |
+|-----------------------------------------------------------------------|-------|
+| Algorithms                                                            | ✅     |
+| Report                                                                      | ✅     |
+| GitHub workflow                         | ✅     |
+| Testing | ✅     |
+
+---
+
 ## 👨‍💻 Автор
 - Mansur (@mansurrvv)
+
+---
 
 # 1. Architecture notes
 
@@ -60,6 +81,8 @@ Complexity   --->   The complexity of O(n logn) is achieved through two keys poi
 Memory management   --->   The algorithm performs most operations in-place. The only memory allocation accurs for the array of medians m that size is n/5.
 
 Recursion Control   --->   Achieves linear complexity O(n) by selecting a deterministic pivot that is quaranteed to be in the range between 30% and 70% of the elements. This prevents the "BAD" partitions characteristic of QuickSelect.
+
+---
 
 # 2. Recurrence Analyze
 
@@ -104,6 +127,8 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 -  Θ(n)
 
+---
+
 # 3 Constant-Factor Effects
 
 ### 3.1 Cache Locality 
@@ -140,6 +165,8 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 - In my Quick Sort / Select algorithms work primarily with primitive int[] array and have minimal impact on Garbage Collection (GC).
 
+---
+
 # Summary
 
 ### Algorithm:
@@ -152,7 +179,8 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 #### 2. Quick Sort
 
-- Theory Θ: _Θ(n logn)_
+- Theory A complex description: what it is and why it is needed
+Θ: _Θ(n logn)_
 - Practical observation: High performance thanks to in-place partitioning and good cache locality.
 - Allignment / Misallignment: Compliance
 
