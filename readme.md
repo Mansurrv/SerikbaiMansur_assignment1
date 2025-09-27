@@ -5,7 +5,7 @@
 ![Mansurrv](https://img.shields.io/github/:Mansurrv?style=social)
 
 
-# Assignment 1
+# ![gif](https://github.com/Readme-Workflows/Readme-Icons/blob/main/icons/gifs/wave.gif)Assignment 1
 _A description that contains complex analyze: what it is and why it is needed_
 
 
@@ -16,13 +16,13 @@ _A description that contains complex analyze: what it is and why it is needed_
 - [_Summary_](#summary)
 
 
-## ⚙️ Install
+## ⚙️ Clone the Repository
 ```
 git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ```
 
 
-## 🖼️ Скриншоты
+## 🖼 Diagrams
 ![Algorithms](Diagram/AlgorithmsTimeAndN.png)
 ![Algorithms](Diagram/Depth&N/All.png)
 ![Algorithms](Diagram/DeterministicSelectAndQuickSort.png)
