@@ -186,7 +186,6 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 - Allignment / Misallignment: Compliance slower in practice
 
 <br>
-<br>
 
 ## 👨‍💻 Developer
 - Mansur Serikbai (@mansurrvv)
