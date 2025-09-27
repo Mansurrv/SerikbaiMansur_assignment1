@@ -1,5 +1,12 @@
-![License](https://img.shields.io/badge/license-MIT-green)
-![Python](https://img.shields.io/badge/python-3.10-blue)
+![License](https://img.shields.io/badge/java-green)
+![Java](https://img.shields.io/badge/maven-blue)
+![Python](https://img.shields.io/badge/python-yellow)
+![JUnit5](https://img.shields.io/badge/JUnit5-red)
+
+
+# Assignment 1. Algoritms
+A complex description: what it is and why it is needed
+
 
 ## 📑 Contents
 - [_Architecture notes_](#1-architecture-notes)
@@ -10,8 +17,6 @@
 ## ⚙️ Install
 ```
 git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
-cd project
-pip install -r requirements.txt
 ```
 
 ## 🖼️ Скриншоты
@@ -22,6 +27,15 @@ pip install -r requirements.txt
 ![Algorithms](Diagram/Depth&N/QuickSort.png)
 ![Algorithms](Diagram/QuickSortAndMergeSort.png)
 ![Algorithms](Diagram/Depth&N/MergeSort.png)
+
+## 🛠 Technology stack
+- Java Core
+- Python
+- JUnit5
+- Maven
+
+## 👨‍💻 Автор
+- Mansur (@mansurrvv)
 
 # 1. Architecture notes
 
