@@ -4,6 +4,7 @@
 ![JUnit5](https://img.shields.io/badge/JUnit5-red)
 
 
+
 # ![gif](https://github.com/Readme-Workflows/Readme-Icons/blob/main/icons/gifs/wave.gif) Assignment 1
 _A description that contains complex analyze: what it is and why it is needed_
 
