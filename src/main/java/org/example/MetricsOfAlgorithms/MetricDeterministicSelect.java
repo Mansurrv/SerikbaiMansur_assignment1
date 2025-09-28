@@ -47,6 +47,7 @@ public class MetricDeterministicSelect {
         }
     }
 
+
     private static int partition(int[] arr, int left, int right, int pivotIndex, Metrics metrics) {
 
         int pivotValue = arr[pivotIndex];
@@ -103,6 +104,7 @@ public class MetricDeterministicSelect {
             arr[j+1] = key;
         }
     }
+
 
     private static void swap(int[] arr, int i, int j, Metrics metrics) {
         int tmp = arr[i];
