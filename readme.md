@@ -18,6 +18,7 @@ _A description that contains complex analyze: what it is and why it is needed_
 <br>
 
 ## ⚙️ Clone the Repository
+
 ```
 git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 ```
@@ -26,17 +27,13 @@ git clone https://github.com/Mansurrv/SerikbaiMansur_assignment1
 
 ## 🖼 Diagrams
 >The Algorithms that find in what time do it from 1 to `n` (MergeSort / QuickSort / DeterministicSelect / ClosestPair)
-![Algorithms](Diagram/AlgorithmsTimeAndN.png)
-![Algorithms](Diagram/Benchmark/benchmark.png)
-![Algorithms](Diagram/Depth&N/All.png)
-![Algorithms](Diagram/DeterministicSelectAndQuickSort.png)
-![Algorithms](Diagram/Depth&N/DeterministicSelect.png)
-![Algorithms](Diagram/Depth&N/QuickSort.png)
-![Algorithms](Diagram/QuickSortAndMergeSort.png)
-![Algorithms](Diagram/Depth&N/MergeSort.png)
-![Algorithms](Diagram/Depth&N/ClosestPair.png)
-![Algorithms](Diagram/Depth&N/Total.png)
-![Algorithms](Diagram/MerticsResult/metric.png)
+![Algorithms](Plots/PerformanceResult.png)
+![Algorithms](Plots/AlgorithmsTimeAndN.png)
+![Algorithms](Plots/Depth&N/DepthAndSizeN.png)
+![Algorithms](Plots/Benchmark/benchmark.png)
+![Algorithms](Plots/MetricsResult/metric.png)
+![Algorithms](Plots/QuickSortAndMergeSort.png)
+![Algorithms](Plots/DeterministicSelectAndQuickSort.png)
 
 
 <br>
@@ -106,14 +103,14 @@ The method of analysis that i use is _Master Theorem_. The Recusive Ratio is `T(
 
 ### 2.4 Deterministic Select (Median of Medians)
 
-The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The Recursive Ratio `T(n) <= T(n/5) + T(7n/10) + Θ(n)`. 
+The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The Recursive Ratio `T(n) <= T(n/5) + T(7n/10) + Θ(n)`.
 
 #### Explanation how i find it?
 
 - `T(n/5)` this is recursive calls for determine Median of Medians
 - `T(7n/10)` this is worst case for recursive call on a subarray. That means after splitting, one side has no more than `7n/10` elements.
 
-#### Akra-Bazzi: 
+#### Akra-Bazzi:
 
 - The sum of recursion shares is `1/5 + 7/10 = 2/10 + 7/10 = 9/10` the cost of recursive calls grows slower than linear work `Θ(n)`.
 
@@ -126,7 +123,7 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 # 3 Constant-Factor Effects
 
-### 3.1 Cache Locality 
+### 3.1 Cache Locality
 
 #### 3.1.1 Merge Sort
 
@@ -138,7 +135,7 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 
 ### 3.2 Impact of overhead costs
 
-#### 3.2.1 Deterministic Select 
+#### 3.2.1 Deterministic Select
 
 - My Deterministic Select algorithm that uses Median of Medians has very high constant factor. Constant division into groups of 5, multiple Insertion Sort for small groups, and two recursive calls even if they are quaranteed its make this algorithm slower in practice than the usual Quick Select or Quick Sort, despite its excellent theoretical complexity of `O(n)`.
 
@@ -147,8 +144,9 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 - Numerious operations with floating point numbers, memory allocation for ArrayList, and the use of Comparator for sorting the band introduce significant overhead, increasing the constant factor compared to integer sorting.
 
 ### 3.3 Garbage Collection
-
-#### 3.3.1 Closest Pair 
+mark.png)
+![Algorithms](Plots/Comparison.png)
+#### 3.3.1 Closest Pair
 
 - In my Closest Pair algorithm using `List<Point>` and creating a new `ArrayList(strip)` at each level of recursion leads to intensive object allocation. This increases the load on the garbage collector, which can cause periodic delays in execution.
 
@@ -159,9 +157,9 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 #### 3.3.3 Quick Sort / Select
 
 - In my Quick Sort / Select algorithms work primarily with primitive `int[] array` and have minimal impact on Garbage Collection (GC).
-docs(report): master cases & AB intuition, initial plots
-<br>
-<br>
+  docs(report): master cases & AB intuition, initial plots
+  <br>
+  <br>
 
 # Summary
 
@@ -169,7 +167,7 @@ docs(report): master cases & AB intuition, initial plots
 
 #### 1. Merge Sort
 
-- Theory Θ: `Θ(n logn)` 
+- Theory Θ: `Θ(n logn)`
 - Practical observation: Average performance, high overhead due to buffer handling.
 - Allignment / Misallignment: Compliance
 
@@ -190,15 +188,6 @@ docs(report): master cases & AB intuition, initial plots
 - Theory Θ: `Θ(n)`
 - Practical observation: The highest constant factor. In practice, slower than _O(n logn)_ Quick Sort / Select for most n.
 - Allignment / Misallignment: Compliance slower in practice
-
-
-| Algorithm           | Theory (Θ)     | Practical Observation                          | Alignment |
-|---------------------|---------------|-----------------------------------------------|-----------|
-| **Merge Sort**      | Θ(n log n)    | Average, buffer overhead                      | ✅ Yes |
-| **Quick Sort**      | Θ(n log n)    | Fast, cache-friendly                          | ✅ Yes |
-| **Closest Pair**    | Θ(n log n)    | Slower due to GC & floating-point             | ⚠️ Partial |
-| **Deterministic Select** | Θ(n)     | High constant factor, slower than QuickSort   | ⚠️ No |
-
 
 <br>
 
