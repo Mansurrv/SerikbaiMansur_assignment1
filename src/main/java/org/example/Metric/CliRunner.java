@@ -33,7 +33,7 @@ public class CliRunner {
             runOneAlgorithm(algo, n, logger, rand);
         }
 
-        System.out.println("Все результаты сохранены в " + outFile + " ✅");
+        System.out.println("Все результаты сохранены в " + outFile);
     }
 
     private static void runOneAlgorithm(String algo, int n, CsvLogger logger, Random rand) {
@@ -51,7 +51,7 @@ public class CliRunner {
                 MetricMergeSort.mergeSort(arr, buffer, 0, n - 1, m);
                 long end = System.nanoTime();
                 logger.log("MergeSort", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ MergeSort done");
+                System.out.println("MergeSort done");
             }
             case "quicksort" -> {
                 int[] arr = baseArray.clone();
@@ -60,7 +60,7 @@ public class CliRunner {
                 MetricQuickSort.quickSort(arr, 0, n - 1, m);
                 long end = System.nanoTime();
                 logger.log("QuickSort", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ QuickSort done");
+                System.out.println("QuickSort done");
             }
             case "select" -> {
                 int[] arr = baseArray.clone();
@@ -70,7 +70,7 @@ public class CliRunner {
                 int kth = MetricDeterministicSelect.deterministicSelect(arr, 0, n - 1, k, m);
                 long end = System.nanoTime();
                 logger.log("DeterministicSelect", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ Deterministic Select: " + kth);
+                System.out.println("Deterministic Select: " + kth);
             }
             case "closest" -> {
                 MetricClosestPairOfPoints.Point[] points = new MetricClosestPairOfPoints.Point[n];
@@ -87,9 +87,9 @@ public class CliRunner {
                         : 0.0;
                 long end = System.nanoTime();
                 logger.log("ClosestPair", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ Closest Pair: " + minDist);
+                System.out.println("Closest Pair: " + minDist);
             }
-            default -> System.out.println("❌ Unknown algo: " + algo);
+            default -> System.out.println("Unknown algo: " + algo);
         }
     }
 
@@ -144,7 +144,7 @@ public class CliRunner {
         long end4 = System.nanoTime();
         logger.log("ClosestPair", n, m4, (end4 - start4) / 1_000_000);
 
-        System.out.println("✅ All algorithms completed for n = " + n);
+        System.out.println("All algorithms completed for n = " + n);
     }
 
     private static Map<String, String> parseArgs(String[] args) {

@@ -9,7 +9,6 @@ public class CsvLogger {
     public CsvLogger(String fileName) {
         this.fileName = fileName;
 
-        // при каждом запуске создаём новый файл и пишем заголовок
         try (FileWriter writer = new FileWriter(fileName, false)) {
             writer.write("Algorithm,Size,Comparisons,Swaps,MaxDepth,TimeMs\n");
         } catch (IOException e) {

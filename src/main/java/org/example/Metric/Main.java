@@ -58,6 +58,6 @@ public class Main {
             System.out.println("Closest Pair: minimum distance = " + minDist);
         }
 
-        System.out.println("All results saved in results.csv ✅");
+        System.out.println("All results saved in results.csv");
     }
 }
