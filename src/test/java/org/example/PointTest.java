@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PointTest {
+
     private double bruteForceClosestPair(List<Point> points) {
         if (points == null || points.size() < 2) {
             return Double.MAX_VALUE;
