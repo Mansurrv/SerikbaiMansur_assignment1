@@ -6,6 +6,7 @@ import java.util.Random;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class QuickSortTest {
+
     private void testSorting(int[] input, int[] expected, String message) {
         QuickSort.quickSort(input, 0, input.length - 1);
         assertArrayEquals(expected, input, message);
@@ -82,38 +83,47 @@ public class QuickSortTest {
     void testLargeRandomArrayCorrectnessN_500() {
         runLargeRandomTest(500);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_1000() {
         runLargeRandomTest(1000);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_1500() {
         runLargeRandomTest(1500);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_2000() {
         runLargeRandomTest(2000);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_2500() {
         runLargeRandomTest(2500);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_3000() {
         runLargeRandomTest(3000);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_3500() {
         runLargeRandomTest(3500);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_4000() {
         runLargeRandomTest(4000);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_4500() {
         runLargeRandomTest(4500);
     }
+
     @Test
     void testLargeRandomArrayCorrectnessN_5000() {
         runLargeRandomTest(5000);

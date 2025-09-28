@@ -5,8 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class QuickSort {
-    public static void quickSort(int[] arr, int low, int high){
 
+    public static void quickSort(int[] arr, int low, int high){
         while (low < high){
             int pivot = partition(arr, low, high);
 
@@ -20,6 +20,8 @@ public class QuickSort {
             }
         }
     }
+
+
 
     private static int partition(int[] arr, int low, int high){
         Random rd = new Random();
@@ -56,6 +58,8 @@ public class QuickSort {
         arr[right] = temp;
         return right;
     }
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
