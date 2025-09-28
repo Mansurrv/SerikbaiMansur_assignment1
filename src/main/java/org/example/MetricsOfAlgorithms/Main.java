@@ -1,4 +1,4 @@
-package org.example.Metric;
+package org.example.MetricsOfAlgorithms;
 
 import java.util.*;
 

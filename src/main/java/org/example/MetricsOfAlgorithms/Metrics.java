@@ -1,4 +1,4 @@
-package org.example.Metric;
+package org.example.MetricsOfAlgorithms;
 
 public class Metrics {
     private long comparisons = 0;
@@ -21,18 +21,16 @@ public class Metrics {
         }
     }
 
+
     public void exitRecursion() {
         currentDepth--;
     }
-
     public long getComparisons() {
         return comparisons;
     }
-
     public long getSwaps() {
         return swaps;
     }
-
     public int getMaxDepth() {
         return maxDepth;
     }

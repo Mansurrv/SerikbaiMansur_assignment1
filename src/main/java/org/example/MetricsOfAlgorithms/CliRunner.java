@@ -1,4 +1,4 @@
-package org.example.Metric;
+package org.example.MetricsOfAlgorithms;
 
 import java.util.*;
 
@@ -38,9 +38,7 @@ public class CliRunner {
 
     private static void runOneAlgorithm(String algo, int n, CsvLogger logger, Random rand) {
         int[] baseArray = new int[n];
-        for (int i = 0; i < n; i++) {
-            baseArray[i] = rand.nextInt(10000);
-        }
+        for (int i = 0; i < n; i++) baseArray[i] = rand.nextInt(10000);
 
         switch (algo.toLowerCase()) {
             case "mergesort" -> {
@@ -51,7 +49,7 @@ public class CliRunner {
                 MetricMergeSort.mergeSort(arr, buffer, 0, n - 1, m);
                 long end = System.nanoTime();
                 logger.log("MergeSort", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ MergeSort done");
+                System.out.println("MergeSort done");
             }
             case "quicksort" -> {
                 int[] arr = baseArray.clone();
@@ -60,7 +58,7 @@ public class CliRunner {
                 MetricQuickSort.quickSort(arr, 0, n - 1, m);
                 long end = System.nanoTime();
                 logger.log("QuickSort", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ QuickSort done");
+                System.out.println("QuickSort done");
             }
             case "select" -> {
                 int[] arr = baseArray.clone();
@@ -70,36 +68,26 @@ public class CliRunner {
                 int kth = MetricDeterministicSelect.deterministicSelect(arr, 0, n - 1, k, m);
                 long end = System.nanoTime();
                 logger.log("DeterministicSelect", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ Deterministic Select: " + kth);
+                System.out.println("Deterministic Select: " + kth);
             }
             case "closest" -> {
                 MetricClosestPairOfPoints.Point[] points = new MetricClosestPairOfPoints.Point[n];
-                for (int i = 0; i < n; i++) {
-                    points[i] = new MetricClosestPairOfPoints.Point(
-                            rand.nextDouble() * 1000,
-                            rand.nextDouble() * 1000
-                    );
-                }
+                for (int i = 0; i < n; i++) points[i] = new MetricClosestPairOfPoints.Point(rand.nextDouble() * 1000, rand.nextDouble() * 1000);
                 Metrics m = new Metrics();
                 long start = System.nanoTime();
-                double minDist = (n > 1)
-                        ? MetricClosestPairOfPoints.closestPair(points, m)
-                        : 0.0;
+                double minDist = (n > 1) ? MetricClosestPairOfPoints.closestPair(points, m) : 0.0;
                 long end = System.nanoTime();
                 logger.log("ClosestPair", n, m, (end - start) / 1_000_000);
-                System.out.println("✅ Closest Pair: " + minDist);
+                System.out.println("Closest Pair: " + minDist);
             }
-            default -> System.out.println("❌ Unknown algo: " + algo);
+            default -> System.out.println("Unknown algo: " + algo);
         }
     }
 
     private static void runAllAlgorithms(int n, CsvLogger logger, Random rand) {
         int[] baseArray = new int[n];
-        for (int i = 0; i < n; i++) {
-            baseArray[i] = rand.nextInt(10000);
-        }
+        for (int i = 0; i < n; i++) baseArray[i] = rand.nextInt(10000);
 
-        // MergeSort
         int[] arr1 = baseArray.clone();
         int[] buffer = new int[n];
         Metrics m1 = new Metrics();
@@ -108,7 +96,6 @@ public class CliRunner {
         long end1 = System.nanoTime();
         logger.log("MergeSort", n, m1, (end1 - start1) / 1_000_000);
 
-        // QuickSort
         int[] arr2 = baseArray.clone();
         Metrics m2 = new Metrics();
         long start2 = System.nanoTime();
@@ -116,7 +103,6 @@ public class CliRunner {
         long end2 = System.nanoTime();
         logger.log("QuickSort", n, m2, (end2 - start2) / 1_000_000);
 
-        // Deterministic Select
         if (n > 0) {
             int[] arr3 = baseArray.clone();
             int k = n / 2;
@@ -128,23 +114,15 @@ public class CliRunner {
             System.out.println("Deterministic Select: " + k + "-й элемент = " + kth);
         }
 
-        // Closest Pair
         MetricClosestPairOfPoints.Point[] points = new MetricClosestPairOfPoints.Point[n];
-        for (int i = 0; i < n; i++) {
-            points[i] = new MetricClosestPairOfPoints.Point(
-                    rand.nextDouble() * 1000,
-                    rand.nextDouble() * 1000
-            );
-        }
+        for (int i = 0; i < n; i++) points[i] = new MetricClosestPairOfPoints.Point(rand.nextDouble() * 1000, rand.nextDouble() * 1000);
         Metrics m4 = new Metrics();
         long start4 = System.nanoTime();
-        double minDist = (n > 1)
-                ? MetricClosestPairOfPoints.closestPair(points, m4)
-                : 0.0;
+        double minDist = (n > 1) ? MetricClosestPairOfPoints.closestPair(points, m4) : 0.0;
         long end4 = System.nanoTime();
         logger.log("ClosestPair", n, m4, (end4 - start4) / 1_000_000);
 
-        System.out.println("✅ All algorithms completed for n = " + n);
+        System.out.println("All algorithms completed for n = " + n);
     }
 
     private static Map<String, String> parseArgs(String[] args) {

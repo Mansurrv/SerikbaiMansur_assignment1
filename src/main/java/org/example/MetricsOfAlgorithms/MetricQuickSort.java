@@ -1,19 +1,24 @@
-package org.example.Metric;
+package org.example.MetricsOfAlgorithms;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class MetricQuickSort {
+
     private static final Random rand = new Random();
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
         int n = sc.nextInt();
         int[] array = new int[n];
+
         for (int i = 0; i < n; i++) array[i] = sc.nextInt();
 
         Metrics metrics = new Metrics();
+
         CsvLogger logger = new CsvLogger("results.csv");
 
         long start = System.nanoTime();
@@ -31,6 +36,7 @@ public class MetricQuickSort {
     }
 
     protected static void quickSort(int[] arr, int low, int high, Metrics metrics) {
+
         metrics.enterRecursion();
 
         while (low < high) {
@@ -49,8 +55,10 @@ public class MetricQuickSort {
     }
 
     private static int partition(int[] arr, int low, int high, Metrics metrics) {
+
         int pivotIndex = low + rand.nextInt(high - low + 1);
         int pivot = arr[pivotIndex];
+
         swap(arr, pivotIndex, high, metrics);
 
         int i = low;
@@ -62,13 +70,16 @@ public class MetricQuickSort {
             }
         }
         swap(arr, i, high, metrics);
+
         return i;
     }
 
     private static void swap(int[] arr, int i, int j, Metrics metrics) {
+
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
         metrics.incSwaps();
+
     }
 }

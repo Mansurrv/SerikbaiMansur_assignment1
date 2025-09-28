@@ -1,10 +1,11 @@
-package org.example.Metric;
+package org.example.MetricsOfAlgorithms;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MetricDeterministicSelect {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
@@ -29,6 +30,7 @@ public class MetricDeterministicSelect {
     }
 
     protected static int deterministicSelect(int[] arr, int left, int right, int k, Metrics metrics) {
+
         while (true) {
             if (left == right) return arr[left];
 
@@ -46,8 +48,11 @@ public class MetricDeterministicSelect {
     }
 
     private static int partition(int[] arr, int left, int right, int pivotIndex, Metrics metrics) {
+
         int pivotValue = arr[pivotIndex];
+
         swap(arr, pivotIndex, right, metrics);
+
         int storeIndex = left;
 
         for (int i = left; i < right; i++) {
@@ -61,14 +66,18 @@ public class MetricDeterministicSelect {
         return storeIndex;
     }
 
+
     private static int medianOfMedians(int[] arr, int left, int right, Metrics metrics) {
+
         int n = right - left + 1;
+
         if (n < 5) {
             insertionSort(arr, left, right, metrics);
             return left + n/2;
         }
 
         int numMedians = 0;
+
         for (int i = left; i <= right; i += 5) {
             int subRight = Math.min(i+4, right);
             insertionSort(arr, i, subRight, metrics);

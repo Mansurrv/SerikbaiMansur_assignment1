@@ -1,10 +1,13 @@
-package org.example.Metric;
+package org.example.MetricsOfAlgorithms;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class MetricMergeSort{
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
         int n = sc.nextInt();
         int[] array = new int[n];
         int[] buffer = new int[n];
@@ -14,6 +17,7 @@ public class MetricMergeSort{
         }
 
         Metrics metrics = new Metrics();
+
         CsvLogger logger = new CsvLogger("results.csv");
 
         long start = System.nanoTime();
@@ -28,10 +32,13 @@ public class MetricMergeSort{
         System.out.println("Comparisons: " + metrics.getComparisons());
         System.out.println("Swaps: " + metrics.getSwaps());
         System.out.println("Max recursion depth: " + metrics.getMaxDepth());
+
     }
 
 
+
     protected static void mergeSort(int[] array, int[] buffer, int low, int high, Metrics metrics){
+
         metrics.enterRecursion();
 
         if (high - low + 1 <= 10){
