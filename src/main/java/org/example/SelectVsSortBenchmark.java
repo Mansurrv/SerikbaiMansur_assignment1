@@ -6,12 +6,14 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @Warmup(iterations = 2, time = 1)
 @Measurement(iterations = 3, time = 1)
 @Fork(1)
 @State(Scope.Thread)
+
 public class SelectVsSortBenchmark {
 
     @Param({"100", "1000", "10000"})
