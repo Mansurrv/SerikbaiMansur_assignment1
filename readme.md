@@ -144,8 +144,7 @@ The method of analysis that i use is _Substitution Method_ or _Akra-Bazzi_. The 
 - Numerious operations with floating point numbers, memory allocation for ArrayList, and the use of Comparator for sorting the band introduce significant overhead, increasing the constant factor compared to integer sorting.
 
 ### 3.3 Garbage Collection
-mark.png)
-![Algorithms](Plots/Comparison.png)
+
 #### 3.3.1 Closest Pair
 
 - In my Closest Pair algorithm using `List<Point>` and creating a new `ArrayList(strip)` at each level of recursion leads to intensive object allocation. This increases the load on the garbage collector, which can cause periodic delays in execution.
