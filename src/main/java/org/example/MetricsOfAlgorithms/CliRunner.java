@@ -6,14 +6,18 @@ public class CliRunner {
     public static void main(String[] args) {
         Map<String, String> params = parseArgs(args);
 
+
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
+
 
         String algo = params.getOrDefault("algo", input);
         String outFile = params.getOrDefault("out", "resultsCli.csv");
 
+
         CsvLogger logger = new CsvLogger(outFile);
         Random rand = new Random();
+
 
         if (params.containsKey("range")) {
             String[] parts = params.get("range").split(":");
@@ -36,7 +40,10 @@ public class CliRunner {
         System.out.println("Все результаты сохранены в " + outFile + " ✅");
     }
 
+
+
     private static void runOneAlgorithm(String algo, int n, CsvLogger logger, Random rand) {
+
         int[] baseArray = new int[n];
         for (int i = 0; i < n; i++) baseArray[i] = rand.nextInt(10000);
 
@@ -84,9 +91,12 @@ public class CliRunner {
         }
     }
 
+
     private static void runAllAlgorithms(int n, CsvLogger logger, Random rand) {
+
         int[] baseArray = new int[n];
         for (int i = 0; i < n; i++) baseArray[i] = rand.nextInt(10000);
+
 
         int[] arr1 = baseArray.clone();
         int[] buffer = new int[n];
