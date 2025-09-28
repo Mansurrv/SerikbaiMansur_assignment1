@@ -1,15 +1,20 @@
 package org.example;
 
+
 import java.util.Arrays;
 import java.util.Scanner;
 
+
 public class DeterministicSelect {
+
     public static int select(int[] array, int k){
         if (array == null || k <= 0 || k > array.length){
             throw new IllegalArgumentException("Erroneous selection");
         }
         return select_helper(array, 0, array.length-1, k-1);
     }
+
+
 
     public static int select_helper(int[] array, int low, int high, int k){
         if (high - low + 1 <= 10){
@@ -31,6 +36,8 @@ public class DeterministicSelect {
         }
     }
 
+
+
     private static int mOfm(int[] array, int low, int high){
         int n = high - low + 1;
         int num_groups = (n+4)/5;
@@ -46,6 +53,8 @@ public class DeterministicSelect {
         return select_helper(m, 0, m.length-1, (m.length-1)/2);
     }
 
+
+
     private static void insertionSort(int[] array, int low, int high){
         for (int i=low+1; i<=high; i++){
             int key = array[i];
@@ -57,6 +66,8 @@ public class DeterministicSelect {
             array[j+1] = key;
         }
     }
+
+
 
     private static int partition(int[] array, int low, int high, int pivot) {
         int pivotIndex = -1;
@@ -94,11 +105,15 @@ public class DeterministicSelect {
         return i;
     }
 
+
+
     protected static void swap(int[] array, int i, int j){
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
+
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

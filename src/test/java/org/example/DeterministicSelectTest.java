@@ -8,13 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class DeterministicSelectTest {
 
+
     private final Random random = new Random();
+
 
     private int getExpectedKth(int[] array, int k) {
         int[] sortedCopy = array.clone();
         Arrays.sort(sortedCopy);
         return sortedCopy[k - 1];
     }
+
 
     private int[] copyAndScramble(int[] original) {
         int[] copy = original.clone();
@@ -23,6 +26,7 @@ public class DeterministicSelectTest {
         }
         return copy;
     }
+
 
     private void runMultipleTrialsTest(int N, int numTrials) {
         System.out.println("Start up test: N=" + N + ", numTrials=" + numTrials);
@@ -48,42 +52,52 @@ public class DeterministicSelectTest {
 
 
 
+
     @Test
     void validateAgainstArraysSortN_500_Trials() {
         runMultipleTrialsTest(500, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_1000_Trials() {
         runMultipleTrialsTest(1000, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_1500_Trials() {
         runMultipleTrialsTest(1500, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_2000_Trials() {
         runMultipleTrialsTest(2000, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_2500_Trials() {
         runMultipleTrialsTest(2500, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_3000_Trials() {
         runMultipleTrialsTest(3000, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_3500_Trials() {
         runMultipleTrialsTest(3500, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_4000_Trials() {
         runMultipleTrialsTest(4000, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_4500_Trials() {
         runMultipleTrialsTest(4500, 100);
     }
+
     @Test
     void validateAgainstArraysSortN_5000_Trials() {
         runMultipleTrialsTest(5000, 100);
