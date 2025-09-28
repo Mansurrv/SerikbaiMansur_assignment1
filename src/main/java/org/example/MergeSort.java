@@ -2,6 +2,7 @@ package org.example;
 import java.util.Scanner;
 
 public class MergeSort{
+
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
@@ -22,6 +23,8 @@ public class MergeSort{
         sc.close();
     }
 
+
+
     protected static void mergeSort(int[] array, int[] buffer, int low, int high){
         if (high - low + 1 <= 10){
             insertionSort(array, low, high);
@@ -39,6 +42,8 @@ public class MergeSort{
         print(array, buffer, low, mid, high);
 
     }
+
+
 
     private static void print(int[] array, int[] buffer, int low, int mid, int high){
         for (int i=low; i<=high; i++){
@@ -73,6 +78,8 @@ public class MergeSort{
             k++;
         }
     }
+
+
 
     private static void insertionSort(int[] array, int low, int high){
         for (int i=low+1; i<=high; i++){
